@@ -29,7 +29,7 @@
             }
       }
 ?>
-<html>
+<!doctype html>
 <head>
 	<title>Contact Form PHP</title>
 	<!-- Latest compiled and minified CSS -->
@@ -59,7 +59,7 @@
       <div class="container">
       	<div class="row">
       		<div class="col-md-6 cold-md-offset-3 emailForm">
-      			<h1>My email form hello</h1>
+      			<h1>My email form</h1>
 
                         <?php echo $result; ?>
 
@@ -68,21 +68,23 @@
       			<form method = "post">
       				<div class-"form-group">
       					<label for="name">Your Name:</label>
-      					<input type="text" name="name" class="form-control" placeholder="Your Name">
+      					<input type="text" name="name" class="form-control" placeholder="Your Name" value="<?php echo $_POST['name']; ?>" />
       				</div>
                               <div class-"form-group">
       					<label for="email">Your Email:</label>
-      					<input type="email" name="name" class="form-control" placeholder="Your Email">
+      					<input type="email" name="name" class="form-control" placeholder="Your Email" value="<?php echo $_POST['email']; ?>">
       				</div>
                               <div class-"form-group">
                                     <label for="comment">Your Comment:</label>
-                                    <textarea class="form-control" name="comment"></textarea>
+                                    <textarea class="form-control" name="comment"><value="<?php echo $_POST['name']; ?>"/textarea>
                               </div>
                               <input type="submit" class="btn btn-success btn-lg" value="Submit">
       			</form>
       		</div>
       	</div>
       </div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 <!-- Latest compiled and minified JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 </body>
