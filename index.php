@@ -17,14 +17,6 @@
                   $error.="<br />Please enter a comment";
             }
 
-            if (filter_var('yhnky@n3.co', FILTER_VAlIDATE_EMAIL)) {
-
-                  echo "VALID";
-            } else {
-
-                  echo "NOT VALID";
-            }
-
             if ($error) {
 
             $result='<div class="alert alert-danger">There were error(s) on your form:'.$error.'</div>';
